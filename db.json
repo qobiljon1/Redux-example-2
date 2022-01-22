@@ -1,0 +1,56 @@
+{
+  "news": [
+    {
+      "id": 1,
+      "name": "My first news",
+      "description": " New processes only spawn after all restart tries of aprocess",
+      "category": "Hot News"
+    },
+    {
+      "id": 2,
+      "name": "Xavi was train barselona",
+      "description": " New processes only spawn after all restart tries of aprocess",
+      "category": "Sport News"
+    },
+    {
+      "id": 3,
+      "name": "In the world  was hot nature",
+      "description": " New processes only spawn after all restart tries of aprocess",
+      "category": "World News"
+    },
+    {
+      "id": "c84f80a4-db43-4faf-a1e3-54eb5b221cb2",
+      "name": "Footbal news",
+      "description": "Xavi was train barselona\nNew processes only spawn after all restart tries of aprocess\n\n",
+      "category": "Sport News"
+    },
+    {
+      "id": "63776a8c-bd2e-4bc4-9424-4c362fb13e35",
+      "name": "Footbal newssa",
+      "description": "Xavi was train barselona\nNew processes only spawn after all restart tries of aprocess\n\n",
+      "category": "Hot News"
+    }
+  ],
+  "filters": [
+    {
+      "name": "all",
+      "label": "All",
+      "className": "btn-outline-dark"
+    },
+    {
+      "name": "Hot News",
+      "label": "Hot News",
+      "className": "btn-danger"
+    },
+    {
+      "name": "Sport News",
+      "label": "Sport News",
+      "className": "btn-primary"
+    },
+    {
+      "name": "World News",
+      "label": "World News",
+      "className": "btn-success"
+    }
+  ]
+}
