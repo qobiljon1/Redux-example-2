@@ -44,3 +44,9 @@ export const activeButton = (name) => {
     payload: name,
   };
 };
+export const deleteNews = (id) => {
+  return {
+    type: "DELETE_ITEM",
+    payload: id,
+  };
+};

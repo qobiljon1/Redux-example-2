@@ -34,6 +34,10 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         news: newsCreatedObj,
+        filteredNews:
+          state.activeFilter === "all"
+            ? newsCreatedObj
+            : newsCreatedObj.filter((s) => s.category === state.activeFilter),
       };
     case "NEWS_DELETE":
       return {};
@@ -62,7 +66,16 @@ const reducer = (state = initialState, action) => {
             ? state.news
             : state.news.filter((obj) => obj.category === action.payload),
       };
-
+    case "DELETE_ITEM":
+      const newsList = state.news.filter((s) => s.id !== action.payload);
+      return {
+        ...state,
+        news: newsList,
+        filteredNews:
+          state.activeFilter === "all"
+            ? newsList
+            : newsList.filter((s) => s.category === state.activeFilter),
+      };
     default:
       return state;
   }

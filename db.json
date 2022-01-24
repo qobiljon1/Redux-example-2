@@ -1,34 +1,16 @@
 {
   "news": [
     {
-      "id": 1,
-      "name": "My first news",
-      "description": " New processes only spawn after all restart tries of aprocess",
-      "category": "Hot News"
-    },
-    {
-      "id": 2,
-      "name": "Xavi was train barselona",
-      "description": " New processes only spawn after all restart tries of aprocess",
-      "category": "Sport News"
-    },
-    {
-      "id": 3,
-      "name": "In the world  was hot nature",
-      "description": " New processes only spawn after all restart tries of aprocess",
+      "id": "94c746ac-5a2d-462d-b3db-9c96b8f61537",
+      "name": "My secondnews",
+      "description": "Sky Sports requires your consent for our trusted partners to store and access cookies, unique identifiers, personal data, and information on your browsing behaviour on this device. This applies to Sky Sports only. You can change your preferences at any time in “Privacy Options”, located at the bottom of every page. You don’t have to accept, but some personalised content and advertising may not work if you don’t. Our partners use your data for:",
       "category": "World News"
     },
     {
-      "id": "c84f80a4-db43-4faf-a1e3-54eb5b221cb2",
-      "name": "Footbal news",
-      "description": "Xavi was train barselona\nNew processes only spawn after all restart tries of aprocess\n\n",
+      "id": "52aed423-0bfd-4149-9ccb-bf5dfd2e172f",
+      "name": "footbal",
+      "description": "this device. This applies to Sky Sports only. You can change your preferences at any time in “Privacy Options”, located at the bottom of every page. You don’t have to accept, but some personalised content and advertising may not work if you don’t. Our partners use your data for:",
       "category": "Sport News"
-    },
-    {
-      "id": "63776a8c-bd2e-4bc4-9424-4c362fb13e35",
-      "name": "Footbal newssa",
-      "description": "Xavi was train barselona\nNew processes only spawn after all restart tries of aprocess\n\n",
-      "category": "Hot News"
     }
   ],
   "filters": [
