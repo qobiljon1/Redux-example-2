@@ -27,9 +27,8 @@ export default function NewsList() {
 
   const onDelete = useCallback((id) => {
     request(`http://localhost:3001/news/${id}`, "DELETE")
-      .then((data) => console.log(data))
-      .then((data) => dispatch(deleteNews(data)))
-      .catch((err) => console.log(err));
+      .then((dispatch(deleteNews(id))))
+      .catch((err) => console.log(err))
 
     //eslint-disable-next-line
   }, []);
