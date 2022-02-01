@@ -1,52 +1,34 @@
-export const newsFetching = () => {
-  return {
-    type: "NEWS_FETCHING",
-  };
-};
+import { createAction } from "@reduxjs/toolkit";
+import {
+  newsFetching,
+  deleteNews,
+  newsFetched,
+} from "../components/NewsList/news_slice";
 
-export const newsFetched = (news) => {
-  return {
-    type: "NEWS_FETCHED",
-    payload: news,
-  };
-};
 
-export const newsFetchingError = () => {
-  return {
-    type: "NEWS_FETCING_ERROR",
-  };
+export const fetching = (request) => (dispatch) => {
+  dispatch(newsFetching());
+  request("http://localhost:3001/news")
+    .then((data) => dispatch(newsFetched(data)))
+    .catch(() => dispatch("NEWS_FETCING_ERROR"));
 };
-export const newsCreated = (news) => {
-  return {
-    type: "NEWS_CREATED",
-    payload: news,
-  };
+export const filterFunc = (request) => (dispatch) => {
+  dispatch(filterFetching());
+  request("http://localhost:3001/filters")
+    .then((data) => dispatch(filterFetched(data)))
+    .catch(() => dispatch(filterError));
 };
-export const filterFetching = () => {
-  return {
-    type: "FILTER_FETCHING",
-  };
+export const deleteFunc = (request, id) => (dispatch) => {
+  request(`http://localhost:3001/news/${id}`, "DELETE")
+    .then(dispatch(deleteNews(id)))
+    .catch((err) => console.log(err));
 };
-export const filterFetched = (fetching) => {
-  return {
-    type: "FILTER_FETCHED",
-    payload: fetching,
-  };
-};
-export const filterError = () => {
-  return {
-    type: "FILTERS_ERROR",
-  };
-};
-export const activeButton = (name) => {
-  return {
-    type: "ACTIVE_BUTTON",
-    payload: name,
-  };
-};
-export const deleteNews = (id) => {
-  return {
-    type: "DELETE_ITEM",
-    payload: id,
-  };
-};
+// export const newsFetching = createAction("NEWS_FETCHING");
+// export const newsFetched = createAction("NEWS_FETCHED");
+// export const newsFetchingError = createAction("NEWS_FETCING_ERROR");
+// export const newsCreated = createAction("NEWS_CREATED");
+// export const deleteNews = createAction("DELETE_ITEM");
+export const filterFetching = createAction("FILTER_FETCHING");
+export const filterFetched = createAction("FILTER_FETCHED");
+export const filterError = createAction("FILTERS_ERROR");
+export const activeButton = createAction("ACTIVE_BUTTON");

@@ -2,31 +2,27 @@ import React from "react";
 import { useHttp } from "../hook/useHttp";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  filterFetching,
-  filterFetched,
-  filterError,
-  activeButton,
-} from "../redux/actions";
+import { activeButton, filterFunc } from "../redux/actions";
 import Spinner from "./Spinner";
 import Error from "./Error";
 import classNames from "classnames";
 
 function NewsFilter() {
   const { filters, filtersLoadingStatus, activeFilter } = useSelector(
-    (state) => state
+    (state) => state.filter
   );
   const dispatch = useDispatch();
   const { request } = useHttp();
 
+  // ================= UseEffect ================= //
+
   useEffect(() => {
-    dispatch(filterFetching());
-    request("http://localhost:3001/filters")
-      .then((data) => dispatch(filterFetched(data)))
-      .catch(() => dispatch(filterError));
+    dispatch(filterFunc(request));
 
     // eslint-disable-next-line
   }, []);
+
+  // ========================= LOADING ========================= //
 
   if (filtersLoadingStatus === "loading") {
     return <Spinner />;
@@ -39,9 +35,10 @@ function NewsFilter() {
       return <h4 className="text-center mt-5">Filters doesn't found</h4>;
     return arr.map(({ name, label, className }) => {
       const btnClassName = classNames("btn", className, {
-        "active": name === activeFilter,
+        active: name === activeFilter,
       });
 
+      // =================================== BUTTON MAP CODE ============================ //
       return (
         <button
           key={name}
@@ -57,6 +54,7 @@ function NewsFilter() {
 
   const filterButton = renderFilter(filters);
 
+  // =================================== HTML CODE ============================ //
   return (
     <div className="card shadow-lg mt-4">
       <div className="card-body">

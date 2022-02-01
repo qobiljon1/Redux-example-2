@@ -1,16 +1,22 @@
 {
   "news": [
     {
-      "id": "94c746ac-5a2d-462d-b3db-9c96b8f61537",
-      "name": "My secondnews",
-      "description": "Sky Sports requires your consent for our trusted partners to store and access cookies, unique identifiers, personal data, and information on your browsing behaviour on this device. This applies to Sky Sports only. You can change your preferences at any time in “Privacy Options”, located at the bottom of every page. You don’t have to accept, but some personalised content and advertising may not work if you don’t. Our partners use your data for:",
+      "id": "3019806f-e3bb-4f66-b361-06b91c292a17",
+      "name": "Redux Toolkit",
+      "description": "While Reselect is not exclusive to Redux, it is already included by default in the official Redux Toolkit package - no further installation needed.",
       "category": "World News"
     },
     {
-      "id": "52aed423-0bfd-4149-9ccb-bf5dfd2e172f",
-      "name": "footbal",
-      "description": "this device. This applies to Sky Sports only. You can change your preferences at any time in “Privacy Options”, located at the bottom of every page. You don’t have to accept, but some personalised content and advertising may not work if you don’t. Our partners use your data for:",
-      "category": "Sport News"
+      "id": "825a0f57-eeab-4968-85de-2209453fc92f",
+      "name": "Redux",
+      "description": "Redux is a predictable state container for JavaScript apps.\n\nIt helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test. On top of that, it provides a great developer experience, such as live code editing combined with a time traveling debugger.\n\nYou can use Redux together with Reac",
+      "category": "Hot News"
+    },
+    {
+      "id": "743d8b31-798d-43fa-8ba2-5d66acacf937",
+      "name": "Footbal news",
+      "description": "react_devtools_backend.js:4061 Warning: findDOMNode is deprecated in StrictMode. findDOMNode was passed an instance of Transition which is inside StrictMode. Instead, add a ref directly to the element you want to reference. Learn more about using refs safely her",
+      "category": ""
     }
   ],
   "filters": [

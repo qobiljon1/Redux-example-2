@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useHttp } from "../hook/useHttp";
 import { useDispatch } from "react-redux";
 import { v4 } from "uuid";
-import { newsCreated } from "../redux/actions";
+import { newsCreated } from "./NewsList/news_slice";
 
 function NewsAddForm() {
   const dispatch = useDispatch();
@@ -25,8 +25,7 @@ function NewsAddForm() {
     setDescription("");
 
     //eslint-disable-next-line
-  }
-
+  };
 
   return (
     <form className="border p-4 shadow-lg rounded" onSubmit={onSubmitHandler}>
